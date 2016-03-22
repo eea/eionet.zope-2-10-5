@@ -19,7 +19,8 @@ a numeric value. If not set, then it defaults to 600.
 
 Configuration
 -------------
-In the etc/zope.conf set the port of the embedded HTTP service to 8080.
+In the etc/zope.conf set the port of the embedded HTTP service to 8080 and the INSTANCE
+and ZOPE definitions.
 ```
 <http-server>
   # valid keys are "address" and "force-connection-close"
@@ -27,6 +28,8 @@ In the etc/zope.conf set the port of the embedded HTTP service to 8080.
   # force-connection-close on
 </http-server>
 ```
+In the scripts under bin, make sure that the Python interpreter is /var/local/python235/bin/python
+and ZOPE_HOME is /var/local/zope272
 
 Sources
 -------
