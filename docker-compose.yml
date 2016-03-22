@@ -1,0 +1,10 @@
+
+web:
+  build: .
+  environment:
+    USERID: 1001
+  ports:
+  - "80:8080"
+  volumes:
+  - "/var/tmp/etc-cca:/var/local/website:z"
+
