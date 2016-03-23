@@ -28,8 +28,8 @@ and ZOPE definitions.
   # force-connection-close on
 </http-server>
 ```
-In the scripts under bin, make sure that the Python interpreter is /var/local/python235/bin/python
-and ZOPE_HOME is /var/local/zope272
+In the scripts under bin, make sure that the Python interpreter is /usr/local/python/bin/python
+and ZOPE_HOME is /usr/local/zope
 
 Sources
 -------
