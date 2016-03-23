@@ -9,7 +9,7 @@ The installation expects the Zope instance to be located in /var/local/website
 in the container namespace. This can then be mapped to whatever you want in the
 docker-compose.yml file.
 
-The Python interpreter is installed in /usr/local/python and zope in /usr/local/zope
+The Python interpreter is installed in /usr/local/bin/python and zope in /usr/local/zope
 
 If the container doesn't find an etc/zope.conf file, then it creates a new instance
 in /var/local/website.
@@ -28,7 +28,7 @@ and ZOPE definitions.
   # force-connection-close on
 </http-server>
 ```
-In the scripts under bin, make sure that the Python interpreter is /usr/local/python/bin/python
+In the scripts under bin, make sure that the Python interpreter is /usr/local/bin/python
 and ZOPE_HOME is /usr/local/zope
 
 Sources
