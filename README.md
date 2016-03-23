@@ -9,7 +9,7 @@ The installation expects the Zope instance to be located in /var/local/website
 in the container namespace. This can then be mapped to whatever you want in the
 docker-compose.yml file.
 
-The Python interpreter is installed in /var/local/python244 and zope in /var/local/zope2105
+The Python interpreter is installed in /usr/local/python and zope in /usr/local/zope
 
 If the container doesn't find an etc/zope.conf file, then it creates a new instance
 in /var/local/website.
@@ -35,3 +35,9 @@ Sources
 -------
 * https://www.python.org/download/releases/2.4.4/
 * http://old.zope.org/Products/Zope/2.10.5/
+
+Building
+--------
+
+The build the container locally do `docker-compose build`. When you push the changes to GitHub,
+then the Docker Hub will build and publish at eeacms/zope-2-10-5:latest

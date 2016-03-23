@@ -1,4 +1,5 @@
 
+# This file is not usable for production. Instead of build, use image: eeacms/zope-2-10-5:latest
 web:
   build: .
   environment:

@@ -2,7 +2,7 @@ FROM centos:6.6
 
 WORKDIR /opt
 
-ENV WEBSITE=/var/local/website PDIR=/var/local/python244
+ENV WEBSITE=/var/local/website PDIR=/usr/local ZDIR=/usr/local/zope
 
 VOLUME /var/local/website
 
@@ -22,6 +22,6 @@ RUN \
     && cd /opt/python-ldap-2.4.10 && $PDIR/bin/python setup.py build install \
     && cd /opt && PATH=$PDIR/bin:$PATH:. setuptools-0.6c11-py2.4.egg \
     && cd /opt/MySQL-python-1.2.3 && $PDIR/bin/python setup.py build install \
-    && cd /opt/Zope-2.10.5-final && ./configure --prefix=/var/local/zope2105 --with-python=$PDIR/bin/python && make && make install
+    && cd /opt/Zope-2.10.5-final && ./configure --prefix=$ZDIR --with-python=$PDIR/bin/python && make && make install
 
 CMD /entrypoint.sh
